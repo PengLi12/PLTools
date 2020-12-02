@@ -8,9 +8,9 @@
 import UIKit
 
 
-class ProgressView: UIView {
+open class ProgressView: UIView {
     
-    var progress: Float = 0.0 {
+  public  var progress: Float = 0.0 {
         didSet {
             progressView.snp.remakeConstraints { (make) in
                 make.left.top.bottom.equalTo(self)
@@ -24,13 +24,13 @@ class ProgressView: UIView {
         }
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         
         layout()
     }
     
-    func layout() {
+    public func layout() {
         progressView.snp.makeConstraints { (make) in
             make.left.top.bottom.equalTo(self)
             make.width.equalTo(self).multipliedBy(0.0).priority(.medium)
@@ -40,19 +40,19 @@ class ProgressView: UIView {
         }
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     //MARK:懒加载
-    lazy var progressView: UIView = {
+    public lazy var progressView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(red: 89/255.0, green: 186/255.0, blue: 115/255.0, alpha: 1)
         self.addSubview(view)
         return view
     }()
     
-    lazy var label: UILabel = {
+    public lazy var label: UILabel = {
         let label = UILabel()
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 13)
