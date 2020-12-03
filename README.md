@@ -9,6 +9,13 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+let btn = UIButton(type: .custom)
+btn.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+btn.setTitle("test", state: .normal)
+btn.setImage(UIImage(named: "test", state: .normal)
+btn.layoutButton(style: .top, space: 10)
+view.addSubView(btn)
+
 ## Requirements
 
 ## Installation
@@ -19,11 +26,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'PLTools'
 ```
-
-## Author
-
-pengli, 949@qq.com
-
 ## License
 
 PLTools is available under the MIT license. See the LICENSE file for more info.
