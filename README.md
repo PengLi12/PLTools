@@ -10,10 +10,15 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 let btn = UIButton(type: .custom)
+
 btn.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+
 btn.setTitle("test", state: .normal)
+
 btn.setImage(UIImage(named: "test", state: .normal)
+
 btn.layoutButton(style: .top, space: 10)
+
 view.addSubView(btn)
 
 ## Requirements
